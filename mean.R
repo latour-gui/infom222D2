@@ -22,7 +22,8 @@ plot_simple_example <- function(normal_mean, normal_standart_deviation, n = 50) 
 
 #' Plot 2 graphs
 #'  - Arithmetic average of the draws of the normal distribution
-#'  - Proximity (or distance) between the aritmetic average and the mean of the normal distribution considered
+#'  - Proximity (or distance) between the aritmetic average and the mean of the normal distribution
+#' considered
 #'
 #' The normal law is defined by the two paremeters `normal_mean` and `normal_standart_deviation`.
 #'
@@ -35,8 +36,8 @@ plot_simple_example <- function(normal_mean, normal_standart_deviation, n = 50) 
 #' @param normal_mean float               : The \mu parameter for the normal distribution
 #' @param normal_standart_deviation float : The \sigma parameter for the normal distribution
 draw_average_iteration_relation <- function(min, max, step, normal_mean, normal_standart_deviation) {
-  # Impossible to create the y array through vectorization because rnorm `n` argument cannot be a vector of number of
-  # iterations.
+  # Impossible to create the y array through vectorization because rnorm `n` argument cannot be a vector
+  # of number of iterations.
   # So the y vector is preallocated to avoid a new copy at every iteration of the for loop.
   x <- seq(min, max, step)
   y <- numeric(length(x))
